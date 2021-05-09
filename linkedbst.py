@@ -389,3 +389,7 @@ class LinkedBST(AbstractCollection):
         for word in list_of_random_words:
             result = word in linked_bst_case1
         print('{} seconds\n'.format(time()-start_time))
+
+if __name__ == '__main__':
+    tree = LinkedBST()
+    tree.demo_bst('words.txt')
