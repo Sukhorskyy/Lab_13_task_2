@@ -257,12 +257,9 @@ class LinkedBST(AbstractCollection):
         return False
 
     def range_find(self, low, high):
-        '''
-        Returns a list of the items in the tree, where low <= item <= high."""
-        :param low:
-        :param high:
-        :return:
-        '''
+        '''Returns a list of the items in the
+        tree, where low <= item <= high.'''
+
         result = []
         for element in self:
             if low <= element <= high:
@@ -270,10 +267,8 @@ class LinkedBST(AbstractCollection):
         return result
 
     def rebalance(self):
-        '''
-        Rebalances the tree.
-        :return:
-        '''
+        '''Rebalances the tree.'''
+
         el_list = []
         for element in self:
             el_list.append(element)
@@ -293,14 +288,9 @@ class LinkedBST(AbstractCollection):
         return self
 
     def successor(self, item):
-        """
-        Returns the smallest item that is larger than
-        item, or None if there is no such item.
-        :param item:
-        :type item:
-        :return:
-        :rtype:
-        """
+        """Returns the smallest item that is larger than
+        item, or None if there is no such item."""
+
         prev = None
         for element in self.inorder():
             print('prev:', prev, 'elem:', element)
@@ -311,14 +301,9 @@ class LinkedBST(AbstractCollection):
             prev = element
 
     def predecessor(self, item):
-        """
-        Returns the largest item that is smaller than
-        item, or None if there is no such item.
-        :param item:
-        :type item:
-        :return:
-        :rtype:
-        """
+        """Returns the largest item that is smaller than
+        item, or None if there is no such item."""
+
         prev = None
         for element in self.inorder():
             if element == item or element > item:
@@ -326,13 +311,9 @@ class LinkedBST(AbstractCollection):
             prev = element
 
     def demo_bst(self, path):
-        """
-        Demonstration of efficiency binary search tree for the search tasks.
-        :param path:
-        :type path:
-        :return:
-        :rtype:
-        """
+        """Demonstration of efficiency binary
+        search tree for the search tasks."""
+    
         with open(path, mode='r', encoding='utf-8') as words_file:
             original_words_list = words_file.read().split('\n')
 
